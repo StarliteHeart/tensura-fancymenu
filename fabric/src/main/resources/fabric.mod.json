@@ -1,0 +1,30 @@
+{
+    "schemaVersion": 1,
+    "id": "tensura_fancymenu",
+    "version": "${mod_version}",
+    "name": "",
+    "description": "",
+    "authors": ["StarliteHeart"],
+    "contact": {
+        "sources": "",
+        "issues": ""
+    },
+    "license": "MIT",
+    "icon": "icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "client": [
+            "TensuraFancyMenuFabric"
+        ]
+    },
+    "mixins": [
+        "tensura_fancymenu-common.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${fabric_loader_version}",
+        "minecraft": "~${minecraft_version}",
+        "java": ">=${java_version}"
+    },
+    "suggests": {},
+    "breaks": {}
+}

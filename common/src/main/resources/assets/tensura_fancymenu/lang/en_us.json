@@ -1,0 +1,52 @@
+{
+    "tensura_fancymenu.placeholders.world.current_spiritual_health": "Current Player Spiritual Health §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.max_spiritual_health": "Max Player Spiritual Health §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.current_spiritual_health_percent": "Current Player Spiritual Health (Percent) §z[TR]§r",
+
+    "tensura_fancymenu.placeholders.world.current_mount_spiritual_health": "Current Mount Spiritual Health §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.max_mount_spiritual_health": "Max Mount Spiritual Health §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.current_mount_spiritual_health_percent": "Current Mount Spiritual Health (Percent) §z[TR]§r",
+
+    "tensura_fancymenu.placeholders.world.current_magicule": "Current Player Magicules §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.max_magicule": "Max Player Magicules §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.current_magicule_percent": "Current Player Magicules (Percent) §z[TR]§r",
+
+    "tensura_fancymenu.placeholders.world.current_aura": "Current Player Aura §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.max_aura": "Max Player Aura §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.current_aura_percent": "Current Player Aura (Percent) §z[TR]§r",
+
+    "tensura_fancymenu.placeholders.world.current_existence": "Current Player EP §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.max_existence": "Max Player EP §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.current_existence_percent": "Current Player EP (Percent) §z[TR]§r",
+
+    "tensura_fancymenu.placeholders.world.current_severance": "Current Player Severance §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.current_severance_percent": "Current Player Severance (Percent) §z[TR]§r",
+
+    "tensura_fancymenu.placeholders.world.ability_slot_name": "Player Ability Slot Name §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.ability_slot_icon": "Player Ability Slot Icon §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.ability_slot_mode_name": "Player Ability Slot Mode Name §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.ability_slot_mode_index": "Player Ability Slot Mode Index §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.ability_slot_cooldown": "Player Ability Slot Cooldown §z[TR]§r",
+
+    "tensura_fancymenu.placeholders.world.ability_slot_current_learning": "Player Ability Slot Current Learning §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.ability_slot_max_learning": "Player Ability Slot Max Learning §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.ability_slot_current_learning_percent": "Player Ability Slot Current Learning (Percent) §z[TR]§r",
+
+    "tensura_fancymenu.placeholders.world.ability_slot_current_mastery": "Player Ability Slot Current Mastery §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.ability_slot_max_mastery": "Player Ability Slot Max Mastery §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.ability_slot_current_mastery_percent": "Player Ability Slot Current Mastery (Percent) §z[TR]§r",
+
+    "tensura_fancymenu.placeholders.world.area_magicule": "Area Magicule Level §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.magicule_poison_resistance": "Player Magicule Poison Resistance §z[TR]§r",
+    "tensura_fancymenu.placeholders.world.multilayer_barrier": "Player Multilayer Barrier §z[TR]§r",
+
+    "tensura_fancymenu.requirements.world.is_ability_slot_filled": "Is Player Ability Slot Filled §z[TR]§r",
+    "tensura_fancymenu.requirements.world.is_ability_slot_filled.desc": "Returns true if there is a skill assigned to the selected ability slot.",
+    "tensura_fancymenu.requirements.world.is_ability_slot_learned": "Is Player Ability Slot Learned §z[TR]§r",
+    "tensura_fancymenu.requirements.world.is_ability_slot_learned.desc": "Returns true if the skill assigned to the selected ability slot has been fully learned.",
+    "tensura_fancymenu.requirements.world.is_ability_slot_mastered": "Is Player Ability Slot Mastered §z[TR]§r",
+    "tensura_fancymenu.requirements.world.is_ability_slot_mastered.desc": "Returns true if the skill assigned to the selected ability slot has been fully mastered.",
+    "tensura_fancymenu.requirements.world.is_ability_slot_on_cooldown": "Is Player Ability Slot On Cooldown §z[TR]§r",
+    "tensura_fancymenu.requirements.world.is_ability_slot_on_cooldown.desc": "Returns true if the skill assigned to the selected ability slot, in its current mode, is currently on cooldown.",
+    "tensura_fancymenu.requirements.world.is_ability_slot_requirement.value_name": "Slot Number"
+}

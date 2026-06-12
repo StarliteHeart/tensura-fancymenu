@@ -1,0 +1,49 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "Tensura: FancyMenu Compat"
+authors = "StarliteHeart"
+description = '''
+
+'''
+logoFile = "icon.png"
+credits = "Thanks to Mojang for their incredible work and all the fun they've brought us!"
+
+[[mixins]]
+config = "${mod_id}.common.mixins.json"
+
+[features.${mod_id}]
+javaVersion = "[${java_version},${java_version}.999999)"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "[${minecraft_version}]"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${mod_id}]]
+modId = "tensura"
+type = "required"
+versionRange = "[${tensura_version},)"
+ordering = "AFTER"
+side = "CLIENT"
+
+[[dependencies.${mod_id}]]
+modId = "fancymenu"
+type = "required"
+versionRange = "[${fancymenu_version},)"
+ordering = "AFTER"
+side = "CLIENT"
