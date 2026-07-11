@@ -1,47 +1,46 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
-#issueTrackerURL = ""
 license = "MIT"
 
 [[mods]]
 modId = "${mod_id}"
 version = "${mod_version}"
-displayName = "Tensura: FancyMenu Compat"
+displayName = "Tensura Compat: FancyMenu"
 authors = "StarliteHeart"
 description = '''
-
+A compatibility bridge between Tensura: Reincarnated and FancyMenu.
 '''
 logoFile = "icon.png"
-credits = "Thanks to Mojang for their incredible work and all the fun they've brought us!"
+credits = "Special thanks to the TR team for creating such an incredible mod, the FancyMenu team for giving us a way to shape our clients as we please, and Mojang for all the fun they've brought us!"
 
 [[mixins]]
 config = "${mod_id}.common.mixins.json"
 
-[features.${mod_id}]
+[features.${ mod_id }]
 javaVersion = "[${java_version},${java_version}.999999)"
 
-[[dependencies.${mod_id}]]
+[[dependencies.${ mod_id }]]
 modId = "neoforge"
 type = "required"
 versionRange = "[21,)"
 ordering = "NONE"
 side = "CLIENT"
 
-[[dependencies.${mod_id}]]
+[[dependencies.${ mod_id }]]
 modId = "minecraft"
 type = "required"
 versionRange = "[${minecraft_version}]"
 ordering = "NONE"
 side = "CLIENT"
 
-[[dependencies.${mod_id}]]
+[[dependencies.${ mod_id }]]
 modId = "tensura"
 type = "required"
 versionRange = "[${tensura_version},)"
 ordering = "AFTER"
 side = "CLIENT"
 
-[[dependencies.${mod_id}]]
+[[dependencies.${ mod_id }]]
 modId = "fancymenu"
 type = "required"
 versionRange = "[${fancymenu_version},)"

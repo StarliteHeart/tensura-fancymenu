@@ -1,0 +1,34 @@
+package net.starliteheart.tensura_fancymenu.placeholders.ability;
+
+import io.github.manasmods.manascore.skill.api.ManasSkillInstance;
+import io.github.manasmods.tensura.storage.ability.AbilitySlot;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.player.LocalPlayer;
+import net.starliteheart.tensura_fancymenu.utils.AbilitySlotUtils;
+import net.starliteheart.tensura_fancymenu.utils.TensuraFancyMenuUtils;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Optional;
+
+public class AbilitySlotCurrentMasteryPercentagePlaceholder extends AbstractTensuraAbilitySlotPlaceholder {
+    public AbilitySlotCurrentMasteryPercentagePlaceholder() {
+        super("ability_slot_current_mastery_percent");
+    }
+
+    @Override
+    protected String getAbilitySlotString(@NotNull LocalPlayer player, @NotNull ClientLevel level,
+                                          @NotNull AbilitySlot abilitySlot) {
+        Optional<ManasSkillInstance> optional = AbilitySlotUtils.getAbilitySkillInstanceFrom(player, abilitySlot);
+        return optional.map(instance -> {
+                           double current = Math.max(0, instance.getMastery());
+                           int max = instance.getMaxMastery();
+                           return String.valueOf((int) TensuraFancyMenuUtils.calculatePercentage(current, max));
+                       })
+                       .orElseGet(this::getReplacementFallback);
+    }
+
+    @Override
+    public @NotNull String getReplacementFallback() {
+        return String.valueOf(0);
+    }
+}

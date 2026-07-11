@@ -7,5 +7,5 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(SimpleScreen.class)
 public interface SimpleScreenAccessor {
     @Accessor("blurStrength")
-    static void setBlurStrength(int value) { throw new AssertionError(); }
+    static void setBlurStrength(int value) {throw new AssertionError();}
 }

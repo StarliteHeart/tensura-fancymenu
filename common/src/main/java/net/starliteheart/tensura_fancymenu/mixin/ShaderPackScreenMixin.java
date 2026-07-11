@@ -15,8 +15,8 @@ public abstract class ShaderPackScreenMixin extends Screen {
     }
 
     @Inject(method = "renderBlurredBackground", at = @At("HEAD"), cancellable = true)
-    private void invokeVanillaBlurring(float pScreen0, CallbackInfo ci) {
-        super.renderBlurredBackground(pScreen0);
+    private void invokeVanillaBlurring(float partialTicks, CallbackInfo ci) {
+        super.renderBlurredBackground(partialTicks);
         ci.cancel();
     }
 }

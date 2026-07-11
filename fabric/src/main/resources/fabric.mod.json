@@ -2,28 +2,32 @@
     "schemaVersion": 1,
     "id": "tensura_fancymenu",
     "version": "${mod_version}",
-    "name": "",
-    "description": "",
+    "name": "Tensura Compat: FancyMenu",
+    "description": "A compatibility bridge between Tensura: Reincarnated and FancyMenu.",
     "authors": ["StarliteHeart"],
     "contact": {
-        "sources": "",
-        "issues": ""
+        "homepage": "https://modrinth.com/mod/tensura-fancymenu",
+        "sources": "https://github.com/starliteheart/tensura-fancymenu",
+        "issues": "https://github.com/starliteheart/tensura-fancymenu/issues"
     },
     "license": "MIT",
     "icon": "icon.png",
     "environment": "*",
     "entrypoints": {
         "client": [
-            "TensuraFancyMenuFabric"
+            "net.starliteheart.tensura_fancymenu.fabric.TensuraFancyMenuFabric"
         ]
     },
     "mixins": [
-        "tensura_fancymenu-common.mixins.json"
+        "tensura_fancymenu.common.mixins.json"
     ],
     "depends": {
-        "fabricloader": ">=${fabric_loader_version}",
+        "java": ">=${java_version}",
         "minecraft": "~${minecraft_version}",
-        "java": ">=${java_version}"
+        "fabricloader": ">=${fabric_loader_version}",
+        "fabric-api": "*",
+        "tensura": ">=${tensura_version}",
+        "fancymenu": ">=${fancymenu_version}"
     },
     "suggests": {},
     "breaks": {}

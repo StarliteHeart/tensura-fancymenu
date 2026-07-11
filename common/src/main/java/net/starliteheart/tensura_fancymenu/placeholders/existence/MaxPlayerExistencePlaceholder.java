@@ -1,0 +1,23 @@
+package net.starliteheart.tensura_fancymenu.placeholders.existence;
+
+import io.github.manasmods.tensura.util.EnergyHelper;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.player.LocalPlayer;
+import net.starliteheart.tensura_fancymenu.placeholders.AbstractTensuraPlaceholder;
+import org.jetbrains.annotations.NotNull;
+
+public class MaxPlayerExistencePlaceholder extends AbstractTensuraPlaceholder {
+    public MaxPlayerExistencePlaceholder() {
+        super("max_player_existence");
+    }
+
+    @Override
+    protected String getReplacementString(@NotNull LocalPlayer player, @NotNull ClientLevel level) {
+        return String.valueOf(EnergyHelper.getMaxMagicule(player) + EnergyHelper.getMaxAura(player));
+    }
+
+    @Override
+    public @NotNull String getReplacementFallback() {
+        return String.valueOf(0.0);
+    }
+}

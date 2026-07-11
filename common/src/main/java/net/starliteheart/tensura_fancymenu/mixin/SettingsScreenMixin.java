@@ -10,17 +10,32 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(SettingsScreen.class)
 public abstract class SettingsScreenMixin {
 
-    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lio/github/manasmods/tensura/client/screen/SettingsScreen;blurStrength:I", opcode = Opcodes.PUTSTATIC))
+    @Redirect(
+            method = "<init>", at = @At(
+            value = "FIELD", target = "Lio/github/manasmods/tensura/client/screen/SettingsScreen;blurStrength:I",
+            opcode = Opcodes.PUTSTATIC
+    )
+    )
     private void useCfgBlurStrengthInConstructor(int value) {
         SimpleScreenAccessor.setBlurStrength(TensuraFancyMenuUtils.getTensuraMenuBackgroundBlurriness());
     }
 
-    @Redirect(method = "mouseClicked", at = @At(value = "FIELD", target = "Lio/github/manasmods/tensura/client/screen/SettingsScreen;blurStrength:I", opcode = Opcodes.PUTSTATIC))
+    @Redirect(
+            method = "mouseClicked", at = @At(
+            value = "FIELD", target = "Lio/github/manasmods/tensura/client/screen/SettingsScreen;blurStrength:I",
+            opcode = Opcodes.PUTSTATIC
+    )
+    )
     private void useCfgBlurStrengthInMouseClicked(int value) {
         SimpleScreenAccessor.setBlurStrength(TensuraFancyMenuUtils.getTensuraMenuBackgroundBlurriness());
     }
 
-    @Redirect(method = "onClose", at = @At(value = "FIELD", target = "Lio/github/manasmods/tensura/client/screen/SettingsScreen;blurStrength:I", opcode = Opcodes.PUTSTATIC))
+    @Redirect(
+            method = "onClose", at = @At(
+            value = "FIELD", target = "Lio/github/manasmods/tensura/client/screen/SettingsScreen;blurStrength:I",
+            opcode = Opcodes.PUTSTATIC
+    )
+    )
     private void useCfgBlurStrengthInOnClose(int value) {
         SimpleScreenAccessor.setBlurStrength(TensuraFancyMenuUtils.getTensuraMenuBackgroundBlurriness());
     }

@@ -2,6 +2,13 @@ architectury {
     common("fabric", "neoforge")
 }
 
+val generatedResources: File = file("src/generated")
+sourceSets {
+    main {
+        resources.srcDir(generatedResources)
+    }
+}
+
 dependencies {
     // We depend on Fabric Loader here to use the Fabric @Environment annotations,
     // which get remapped to the correct annotations on each platform.
@@ -19,9 +26,8 @@ dependencies {
     modImplementation("io.github.manasmods:manascore-skill-common:${rootProject.property("manascore_version")}")
     modImplementation("io.github.manasmods:manascore-storage-common:${rootProject.property("manascore_version")}")
 
-    modImplementation(files("libs/konkrete-common-${rootProject.property("konkrete_version")}.jar"))
     modImplementation(files("libs/tensura-common-${rootProject.property("tensura_version")}.jar"))
     modImplementation(files("libs/fancymenu-common-${rootProject.property("fancymenu_version")}.jar"))
 
-    modImplementation(files("libs/iris-neoforge-1.8.12+mc1.21.1.jar"))
+    modImplementation(files("libs/iris-neoforge-${rootProject.property("iris_version")}.jar"))
 }

@@ -7,8 +7,17 @@ architectury {
     neoForge()
 }
 
+val generatedResources: File = file("../common/src/generated")
+val defaultResources: File = file("../common/src/main/resources")
 loom {
     enableTransitiveAccessWideners.set(true)
+    runs {
+        register("data") {
+            data()
+            programArgs("--all", "--mod", "tensura_fancymenu")
+            programArgs("--output", generatedResources.absolutePath, "--existing", defaultResources.absolutePath)
+        }
+    }
 }
 
 val shadowBundle = configurations.create("shadowBundle")
@@ -19,12 +28,11 @@ repositories {
 
 dependencies {
     neoForge("net.neoforged:neoforge:${rootProject.property("neoforge_version")}")
+    modImplementation("dev.architectury:architectury-neoforge:${rootProject.property("architectury_api_version")}")
 
     implementation(project(":common", configuration = "namedElements"))
     "developmentNeoForge"(project(":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(":common", configuration = "transformProductionNeoForge"))
-
-    runtimeOnly("dev.architectury:architectury-neoforge:${rootProject.property("architectury_api_version")}")
 
     runtimeOnly(files("libs/geckolib-neoforge-${rootProject.property("geckolib_version")}.jar"))
     runtimeOnly(files("libs/smartbrainlib-neoforge-${rootProject.property("smartbrainlib_version")}.jar"))

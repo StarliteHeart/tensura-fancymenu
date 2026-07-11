@@ -16,12 +16,22 @@ public abstract class SimpleScreenMixin extends Screen {
         super(component);
     }
 
-    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lio/github/manasmods/tensura/client/screen/templates/SimpleScreen;blurStrength:I", opcode = Opcodes.PUTSTATIC))
+    @Redirect(
+            method = "<init>", at = @At(
+            value = "FIELD",
+            target = "Lio/github/manasmods/tensura/client/screen/templates/SimpleScreen;blurStrength:I",
+            opcode = Opcodes.PUTSTATIC
+    )
+    )
     private void useCfgBlurStrengthInConstructor(int original) {
         SimpleScreenAccessor.setBlurStrength(TensuraFancyMenuUtils.getTensuraMenuBackgroundBlurriness());
     }
 
-    @Redirect(method = "render", at = @At(value = "INVOKE", target = "Lio/github/manasmods/tensura/util/client/RenderHelper;renderCustomBlur(I)V"))
+    @Redirect(
+            method = "render", at = @At(
+            value = "INVOKE", target = "Lio/github/manasmods/tensura/util/client/RenderHelper;renderCustomBlur(I)V"
+    )
+    )
     private void invokeVanillaBlurring(int blurStrength, @Local(argsOnly = true) float partialTick) {
         super.renderBlurredBackground(partialTick);
     }

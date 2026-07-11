@@ -3,7 +3,12 @@
     "package": "net.starliteheart.tensura_fancymenu.mixin",
     "compatibilityLevel": "JAVA_21",
     "minVersion": "0.8",
-    "client": ["SettingsScreenMixin", "ShaderPackScreenMixin", "SimpleScreenAccessor", "SimpleScreenMixin", "StyleMixin"],
+    "client": [
+        "SettingsScreenMixin",
+        "ShaderPackScreenMixin",
+        "SimpleScreenAccessor",
+        "SimpleScreenMixin"
+    ],
     "mixins": [],
     "injectors": {
         "defaultRequire": 1
