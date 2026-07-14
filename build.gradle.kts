@@ -38,8 +38,6 @@ subprojects {
         maven("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/")
         maven("https://dl.cloudsmith.io/public/tslat/sbl/maven/")
         maven("https://maven.impactdev.net/repository/development/")
-        maven("https://maven.shedaniel.me/")
-        maven("https://nexus.nighti.dev/repository/manasmods-public/")
         maven("https://api.modrinth.com/maven")
         mavenLocal()
     }

@@ -8,9 +8,10 @@ assignees: StarliteHeart
 ---
 
 **Environment Details**
- - MC Version: [e.g. 1.21.1]
- - Platform Version: [e.g. NeoForge 21.1.228, Fabric 0.19.2]
- - Mod Version [e.g. v0.1.0.beta]
+
+- MC Version: [e.g. 1.21.1]
+- Platform Version: [e.g. NeoForge 21.1.228, Fabric 0.19.2]
+- Mod Version [e.g. v0.1.0-beta]
 
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]

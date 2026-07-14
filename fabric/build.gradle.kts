@@ -22,16 +22,17 @@ dependencies {
     "developmentFabric"(project(":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(":common", configuration = "transformProductionFabric"))
 
-    runtimeOnly(files("libs/geckolib-fabric-${rootProject.property("geckolib_version")}.jar"))
-    runtimeOnly(files("libs/smartbrainlib-fabric-${rootProject.property("smartbrainlib_version")}.jar"))
-    runtimeOnly(files("libs/terrablender-fabric-${rootProject.property("terrablender_version")}.jar"))
-    runtimeOnly(files("libs/manascore-fabric-${rootProject.property("manascore_version")}.jar"))
+    modRuntimeOnly("maven.modrinth:geckolib:${rootProject.property("geckolib_version")}-1.21.1,fabric")
+    modRuntimeOnly("maven.modrinth:smartbrainlib:${rootProject.property("smartbrainlib_version")}-1.21.1,fabric")
+    modRuntimeOnly("maven.modrinth:terrablender:${rootProject.property("terrablender_version")}-1.21.1,fabric")
 
-    runtimeOnly(files("libs/konkrete-fabric-${rootProject.property("konkrete_version")}.jar"))
-    runtimeOnly(files("libs/melody-fabric-${rootProject.property("melody_version")}.jar"))
+    modRuntimeOnly("maven.modrinth:konkrete:${rootProject.property("konkrete_version")}-1.21-fabric")
+    modRuntimeOnly("maven.modrinth:melody:${rootProject.property("melody_version")}-1.21-fabric")
 
-    implementation(files("libs/tensura-fabric-${rootProject.property("tensura_version")}.jar"))
-    implementation(files("libs/fancymenu-fabric-${rootProject.property("fancymenu_version")}.jar"))
+    modRuntimeOnly("maven.modrinth:manascore:${rootProject.property("manascore_version")}-1.21.1,fabric")
+
+    modImplementation("maven.modrinth:tensura-reincarnated:${rootProject.property("tensura_version")}-1.21.1,fabric")
+    modImplementation("maven.modrinth:fancymenu:${rootProject.property("fancymenu_version")}-1.21.1-fabric")
 }
 
 tasks {

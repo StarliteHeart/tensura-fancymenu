@@ -34,16 +34,17 @@ dependencies {
     "developmentNeoForge"(project(":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(":common", configuration = "transformProductionNeoForge"))
 
-    runtimeOnly(files("libs/geckolib-neoforge-${rootProject.property("geckolib_version")}.jar"))
-    runtimeOnly(files("libs/smartbrainlib-neoforge-${rootProject.property("smartbrainlib_version")}.jar"))
-    runtimeOnly(files("libs/terrablender-neoforge-${rootProject.property("terrablender_version")}.jar"))
-    runtimeOnly(files("libs/manascore-neoforge-${rootProject.property("manascore_version")}.jar"))
+    runtimeOnly("maven.modrinth:geckolib:${rootProject.property("geckolib_version")}-1.21.1,neoforge")
+    runtimeOnly("maven.modrinth:smartbrainlib:${rootProject.property("smartbrainlib_version")}-1.21.1,neoforge")
+    runtimeOnly("maven.modrinth:terrablender:${rootProject.property("terrablender_version")}-1.21.1,neoforge")
 
-    runtimeOnly(files("libs/konkrete-neoforge-${rootProject.property("konkrete_version")}.jar"))
-    runtimeOnly(files("libs/melody-neoforge-${rootProject.property("melody_version")}.jar"))
+    runtimeOnly("maven.modrinth:konkrete:${rootProject.property("konkrete_version")}-1.21-neoforge")
+    runtimeOnly("maven.modrinth:melody:${rootProject.property("melody_version")}-1.21-neoforge")
 
-    implementation(files("libs/tensura-neoforge-${rootProject.property("tensura_version")}.jar"))
-    implementation(files("libs/fancymenu-neoforge-${rootProject.property("fancymenu_version")}.jar"))
+    runtimeOnly("maven.modrinth:manascore:${rootProject.property("manascore_version")}-1.21.1,neoforge")
+
+    implementation("maven.modrinth:tensura-reincarnated:${rootProject.property("tensura_version")}-1.21.1,neoforge")
+    implementation("maven.modrinth:fancymenu:${rootProject.property("fancymenu_version")}-1.21.1-neoforge")
 }
 
 tasks {

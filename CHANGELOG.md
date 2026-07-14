@@ -45,8 +45,3 @@
         - Is Ability Slot On Cooldown
 - Patched an issue between FancyMenu and Tensura: Reincarnated where having any amount of menu blur as set through
   Tensura's config would cause screens to not render correctly in larger modpacks.
-    - By consequence, this patch also swaps the menus from using Tensura's blurStrength to using Minecraft's built-in
-      background blur value instead.
-    - If Iris Shaders is installed, this will also patch the same issue with the Shaders menu, where it doesn't render
-      correctly in-world.
-    - More information on why this happens can be found [here](https://github.com/Keksuccino/FancyMenu/issues/1665).

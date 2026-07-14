@@ -8,15 +8,17 @@ assignees: StarliteHeart
 ---
 
 **Environment Details**
- - MC Version: [e.g. 1.21.1]
- - Platform Version: [e.g. NeoForge 21.1.228, Fabric 0.19.2]
- - Mod Version [e.g. v0.1.0.beta]
+
+- MC Version: [e.g. 1.21.1]
+- Platform Version: [e.g. NeoForge 21.1.228, Fabric 0.19.2]
+- Mod Version [e.g. v0.1.0-beta]
 
 **Describe the Bug**
 A clear and concise description of what the bug is.
 
 **To Reproduce**
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
