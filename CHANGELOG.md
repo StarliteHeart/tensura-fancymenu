@@ -2,7 +2,7 @@
 
 ***
 
-### v0.1.0 Beta (Released ???)
+### v0.1.0 Beta (Released July 20, 2026)
 
 #### Initial beta release!
 
